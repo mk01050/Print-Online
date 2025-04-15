@@ -10,9 +10,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/Print-Online/auto-download" element={<AutoDownloadPage/>}/>
-        <Route path="/Print-Online/" element={<UploadPage />} />
-        <Route path="/Print-Online/downloads" element={<DownloadsPage />} />
+        <Route path="/auto-download" element={<AutoDownloadPage/>}/>
+        <Route path="/" element={<UploadPage />} />
+        <Route path="/downloads" element={<DownloadsPage />} />
       </Routes>
     </Router>
   );
