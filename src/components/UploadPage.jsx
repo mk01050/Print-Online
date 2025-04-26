@@ -10,7 +10,7 @@ export default function UploadPage() {
     for (const file of files) {
       const { data, error } = await supabase.storage
         .from("uploads")
-        .upload(`${file.name}`, file);
+        .upload(`pending/${file.name}`, file);
 
       if (error) console.error("Upload error:", error);
       else {
