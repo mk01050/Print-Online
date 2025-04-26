@@ -10,7 +10,7 @@ export default function DownloadsPage() {
       // Fetch all the files in the bucket in order of its upload-time (last uploaded is first)
       const { data, error } = await supabase.storage
         .from("uploads")
-        .list("", { sortBy: { column: "created_at", order: "desc" } });
+        .list("pending", { sortBy: { column: "created_at", order: "desc" } });
 
       // If any error console it
       if (error) console.error("List error:", error);
